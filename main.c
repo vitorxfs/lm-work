@@ -61,9 +61,13 @@ void printMatriz(int matriz[L][L]){
 
 int main() {
     int res[L][L]; //matrizes
+    int bres[L][L];
 
     int a[L][L] = {{1,0,8,1}, {8,5,7,8}, {4,8,7,1}, {5,4,7,0}}; //teste
     int b[L][L] = {{5,3,2,4}, {1,0,8,6}, {5,1,5,6}, {2,3,7,1}}; //teste
+
+    extern int mult_val_matrix(int, int, int *);
+
 
     srand(time(NULL));
     
@@ -74,18 +78,21 @@ int main() {
     printf("\n\nMatriz B: \n");
     printMatriz(b);
 
-    multMatValue(b, 2);
+    //multMatValue(b, 2);
+    mult_val_matrix(L, 2, *b); //NASM
 
     printf("\n\nNova Matriz B: \n");
     printMatriz(b);
 
-    multMatMat(a, b, res);
+    // multMatMat(a, b, res);
 
 
-    printf("\n\nResultado: \n");
-    printMatriz(res);
+    // printf("\n\nResultado: \n");
+    // printMatriz(res);
     
-    printf("\nO maior valor da diagonal principal é: %d\n", maiorValorDiagonalPrincipal(res));
+    // printf("\nO maior valor da diagonal principal é: %d\n", maiorValorDiagonalPrincipal(res));
+
+    
 }
 
 /*
