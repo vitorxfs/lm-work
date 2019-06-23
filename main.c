@@ -78,8 +78,15 @@ int main() {
     printf("\n\nMatriz B: \n");
     printMatriz(b);
 
+
+    clock_t mult_val_matrixStart = clock(); //Início da contagem do tempo de execução da função mult_val_matrix
+    
     //multMatValue(b, 2);
     mult_val_matrix(L, 2, *b); //NASM
+
+    clock_t mult_val_matrixEnd = clock(); //Início da contagem do tempo de execução da função mult_val_matrix
+    double mult_val_matrixTimeSpent = (double)(mult_val_matrixEnd - mult_val_matrixStart) / CLOCKS_PER_SEC; 
+    printf("Execution time for function mult_val_matrix: %lf \n\n", mult_val_matrixTimeSpent);
 
     printf("\n\nNova Matriz B: \n");
     printMatriz(b);
