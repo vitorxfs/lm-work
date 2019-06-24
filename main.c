@@ -66,9 +66,6 @@ int main() {
     int a[L][L] = {{1,0,8,1}, {8,5,7,8}, {4,8,7,1}, {5,4,7,0}}; //teste
     int b[L][L] = {{5,3,2,4}, {1,0,8,6}, {5,1,5,6}, {2,3,7,1}}; //teste
 
-    extern int mult_val_matrix(int, int, int *);
-
-
     srand(time(NULL));
     
     //fill(a);
@@ -82,11 +79,18 @@ int main() {
     clock_t mult_val_matrixStart = clock(); //Início da contagem do tempo de execução da função mult_val_matrix
     
     //multMatValue(b, 2);
+    extern int mult_val_matrix(int, int, int *);
     mult_val_matrix(L, 2, *b); //NASM
+
+
+    /****  TEMPO DE EXECUÇÃO  *****/
 
     clock_t mult_val_matrixEnd = clock(); //Início da contagem do tempo de execução da função mult_val_matrix
     double mult_val_matrixTimeSpent = (double)(mult_val_matrixEnd - mult_val_matrixStart) / CLOCKS_PER_SEC; 
     printf("Execution time for function mult_val_matrix: %lf \n\n", mult_val_matrixTimeSpent);
+    
+    /*******************************/
+
 
     printf("\n\nNova Matriz B: \n");
     printMatriz(b);
