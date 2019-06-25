@@ -1,2 +1,2 @@
-gcc mainC.c -o mainC
-./mainC
+gcc src/mainC.c -o bin/mainC
+./bin/mainC
