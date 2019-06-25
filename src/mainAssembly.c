@@ -36,8 +36,8 @@ int main() {
     clock_t mult_val_matrixStart, mult_val_matrixEnd, mult_mat_matStart, mult_mat_matEnd, maior_valor_diagonalStart, maior_valor_diagonalEnd;
     double timeSpent;
 
-    int a[L][L]; //= {{1,0,8,1}, {8,5,7,8}, {4,8,7,1}, {5,4,7,0}}; //teste
-    int b[L][L]; //= {{5,3,2,4}, {1,0,8,6}, {5,1,5,6}, {2,3,7,1}}; //teste
+    int a[L][L] = {{1,0,8,1}, {8,5,7,8}, {4,8,7,1}, {5,4,7,0}}; //teste
+    int b[L][L] = {{5,3,2,4}, {1,0,8,6}, {5,1,5,6}, {2,3,7,1}}; //teste
 
     int soma;
     int maiorDiag;
@@ -48,8 +48,8 @@ int main() {
 
     srand(time(NULL));
     
-    fill(a);
-    fill(b);
+    //fill(a);
+    //fill(b);
     printf("Matriz A: \n");
     printMatriz(a);
     printf("\n\nMatriz B: \n");
@@ -100,7 +100,7 @@ int main() {
     /***********************************************************************/
     maior_valor_diagonalStart = clock();
 
-    maiorDiag = maior_valor_diagonal(L, *res);
+    maiorDiag = maior_valor_diagonal(L, *a);
 
     maior_valor_diagonalEnd = clock();
 

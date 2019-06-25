@@ -3,8 +3,6 @@
 
     SECTION .data
 
-SIZE: equ 3
-
     SECTION .text
 
     global maior_valor_diagonal
