@@ -11,7 +11,6 @@ mult_val_matrix:
     mov edi, [ebp+12] ; escalar(2)
     mov esi, [ebp+16]  ; matriz[0][0]
     
-
     mov eax, ecx
     mul ecx
     xchg ecx, eax
